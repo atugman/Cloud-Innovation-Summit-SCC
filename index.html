@@ -384,46 +384,15 @@
 <p class="image-container"><img alt="alt-text-here" src="img/a09feb53a9d93bc5.png"></p>
 <p><em>Note: For the purposes of this lab, we&#39;ve been using &#34;On-demand Scans.&#34; As the name suggests, these are scans that you can manually run yourself.</em></p>
 <p><em>One of the great features of SCC is that you can automate this process – you can schedule scans to run on a continuous basis. This saves customers a lot of time managing manual processes involved in maintaining security and compliance measures for their organization.</em></p>
-<p>This scan will take approximately 8 minutes to complete given the number of users we have in our lab. Be sure to stop and consult your instructor if you had any issues completing these steps, or if you have any questions about SCC as a whole. Otherwise, feel free to take a few moments to explore other aspects of SCC, the IBM Cloud environment that we&#39;ve been working in today, or refresh your coffee!</p>
+<p>This scan will take approximately 5-8 minutes to complete given the number of users we have in our lab.</p>
+<p>Be sure to stop and consult your instructor if you had any issues completing these steps, or if you have any questions about SCC as a whole.</p>
+<p>While this scan is running, let&#39;s take a quick look at two additional, existing scans - a Microsoft Azure scan, and an IBM Cloud Satellite scan.</p>
+<p>Go ahead and click &#34;Next&#34; to move onto Phases 2 and 3 when you are ready!</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Review the Latest Scan and Evaluate Drift (Phase 1.4)" duration="0">
-        <p>Now that the scan has completed, let&#39;s see if we were able to improve the security posture of our environment and prepare for compliance reporting. Thinking back to SecureBank, this is a great chance to see the impact that our team new members (Kali Linux and Gene Hackman) have had in their short tenures as CISO and Lead Security Engineer.</p>
-<p>Navigate back to the (latest) validation results:</p>
-<p class="image-container"><img alt="alt-text-here" src="img/cb0fa61d97f76001.png"></p>
-<p>Select your scan from the list. The name of your scan may differ from the screenshot below.</p>
-<p class="image-container"><img alt="alt-text-here" src="img/f042e72a4ec386a3.png"></p>
-<p>Take a moment to review the latest scan! In the top left, make sure you&#39;re looking at the scan with the most recent timestamp. Also, take note of how much your compliance score increased from your first scan!</p>
-<p class="image-container"><img alt="alt-text-here" src="img/358658c5f13cc528.png"></p>
-<p>Let&#39;s take a look at the individual goals that we worked to remediate and see if we were successful.</p>
-<p>Click on the dark red bar in the &#34;Failures&#34; graph as we did previously in the lab:</p>
-<p class="image-container"><img alt="alt-text-here" src="img/5832e701f9cc48cc.png"></p>
-<p>Click on our AC-4 control once again:</p>
-<p class="image-container"><img alt="alt-text-here" src="img/e7baade35a6db88d.png"></p>
-<p>Scroll down and observe the following goals that we worked on, and click into each one:</p>
-<ul>
-<li>Goal ID: 3000107</li>
-<li>Goal ID: 3000441</li>
-<li>Goal ID: 3000445</li>
-</ul>
-<p><strong>Goal 3000107</strong>: Notice that this goal is now passing, indicated by the green ID banner and the green check mark next to the individual COS bucket. SCC was able to see that only our IP address is allowed to access this bucket, which is a great security measure to have in place. We&#39;ve passed this goal!</p>
-<p class="image-container"><img alt="alt-text-here" src="img/7c278c33486afd1f.png"></p>
-<p><strong>Goal 3000441</strong>: Similarly, after updating our ACL, our SCC scan picked up on our new configuration. It knows that we are only allowing access into our VPC from our machine!</p>
-<p class="image-container"><img alt="alt-text-here" src="img/402eb0805d33359f.png"></p>
-<p><strong>Goal 3000445</strong>: Lastly, we passed this goal as well! SCC is much happier with our security group after restricting access to only our machine, as opposed to leaving it accessible by the entire internet.</p>
-<p class="image-container"><img alt="alt-text-here" src="img/f8e568f5c8f85b3a.png"></p>
-<p>Finally, using the drift view in SCC, we make it easy to review how your environment has improved over time based on your remediation steps. You can go ahead and click out of the AC-4 control, then and click on the drift view icon (as shown in the screenshot below) for a visual representation of the improvements we made between the scans we ran in this lab. Customers find tremendous value in being able to show progress over time – notice how much we improved after addressing only a few goals!</p>
-<p class="image-container"><img alt="alt-text-here" src="img/c54355676134ba18.png"></p>
-<p>Congratulations! If you&#39;ve made it this far, you&#39;ve completed the primary hands-on portion of this lab!</p>
-<h2 is-upgraded>Take a moment to consult your instructor. Show them your Drift View from the most recent step and make sure you grab some IBM SWAG!**</h2>
-<p>The remainder of this document is further exploration of SCC to highlight a few additional, unique features.</p>
-
-
-      </google-codelab-step>
-    
-      <google-codelab-step label="Phase 2 – Scan the Microsoft Azure Environment" duration="0">
+      <google-codelab-step label="Phase 2 – Review the Microsoft Azure Scan" duration="0">
         <p>SecureBank is a Multi-Cloud customer, and is looking for a solution that will provide them a single pane of glass for their Multi-Cloud security posture. During their evaluation of the IBM Cloud Security and Compliance Center, their IBM account team helped them explore the Azure integration of SCC. Let&#39;s explore this with them using the provided Azure environment!</p>
 <p>To save you a bit of time, we&#39;ve already executed the scan of our Microsoft Azure environment. This will save you plenty of time waiting for scans to execute, and you can focus on learning more about the SCC offering itself. Kalin and Gene at SecureBank are thrilled at the processes they&#39;ve streamlined and the ease in which they&#39;re updating their security configurations and avoiding fines in their Multi-Cloud environments!</p>
 <p>Let&#39;s start by reviewing a preconfigured profile that SCC offers for Azure environments.</p>
@@ -454,11 +423,12 @@
 <p class="image-container"><img alt="alt-text-here" src="img/5159841c208f1d20.png"></p>
 <p>You&#39;ll notice a series of scripts that can help you quickly remediate your Azure environment.</p>
 <p>SCC provides a single pane of glass to evaluate the security and compliance posture of multi-cloud environments, delivered by IBM. There isn&#39;t another Cloud provider that can provide the level of multi-cloud visibility in a single pane of glass that SCC provides, all while saving customers time with predefined industry-specific profiles that we&#39;ve created.</p>
+<p>Click &#34;Next&#34; to check out the IBM Cloud Satellite scan when you&#39;re ready!</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Phase 3 – Scan the IBM Cloud Satellite Environment" duration="0">
+      <google-codelab-step label="Phase 3 – Review the IBM Cloud Satellite Scan" duration="0">
         <p>IBM Cloud Satellite provides customers with the ability to run IBM Cloud services on their own infrastructure, whether that&#39;s on-premises, at the edge, or even in a different public Cloud than IBM, such as Azure, AWS, or GCP. This provides customers with the ability to consistently deploy and manage their applications regardless of where they are running!</p>
 <p>As mentioned previously, SecureBank provides customers with a modern banking experience and focuses on the speed in which new features are delivered to market. This is a huge differentiator for them against their competitors. A big part of why they&#39;re able to deliver new features faster is their microservices architecture, which they run on Red Hat OpenShift on multiple Clouds, including IBM Cloud and Microsoft Azure. OpenShift provides a consistent orchestration platform that ensures their software can be delivered and managed consistently regardless of where the infrastructure is hosted!</p>
 <p>As you&#39;ve likely noticed throughout this lab, the Security and Compliance Center can scan and evaluate a number of different environments. IBM Cloud Satellite is no exception – SCC can also scan an IBM Cloud Satellite environment and provide validation results. This means that while leveraging the consistency and portability of container-based application development via IBM Cloud Satellite, the Security and Compliance Center can still encompass these environments into its single pane of glass.</p>
@@ -468,8 +438,7 @@
 <p>As we&#39;ve done with previous profiles, explore the various controls that are preconfigured in this profile, and the goals that make up each control!</p>
 <p class="image-container"><img alt="alt-text-here" src="img/242e907838e5be63.png"></p>
 <p>We&#39;ve already created a Satellite cluster and scanned it for you to save you time. Below is a quick glance at the Satellite cluster itself before we review the scan results.</p>
-<p>Note: For the purposes of this lab, you won&#39;t have direct visibility into the Satellite cluster via the IBM Cloud portal, but we hope the screenshots below provide some insight into the architecture. This was actually done to ensure the lab was easy to use and that you were only able to see the Cloud resources that you&#39;d be directly working with.</p>
-<p>Note: For the purposes of this lab, the Satellite cluster is actually hosted on IBM Cloud for testing. However, the scans would run exactly the same way regardless of where the Satellite cluster is hosted.</p>
+<p>Note: For the purposes of this lab, you won&#39;t have direct visibility into the Satellite cluster via the IBM Cloud portal, but we hope the screenshots below provide some insight into the architecture. This was actually done to ensure the lab was easy to use and that you were only able to see the Cloud resources that you&#39;d be directly working with. Additionally, for the sake of this lab, the Satellite cluster is actually hosted on IBM Cloud for testing. However, the scans would run exactly the same way regardless of where the Satellite cluster is hosted.</p>
 <p>Satellite Cluster Architecture:</p>
 <p>Locations:</p>
 <p class="image-container"><img alt="alt-text-here" src="img/a2c806f1af85f8c1.png"></p>
@@ -479,7 +448,7 @@
 <p class="image-container"><img alt="alt-text-here" src="img/cc3c7794b1244d95.png"></p>
 <p>ROKS view (3 worker nodes in our data plane):</p>
 <p class="image-container"><img alt="alt-text-here" src="img/fddbb325ddef43c1.png"></p>
-<p>Now, let&#39;s navigate back to our validation results in SCC one last time! Once you&#39;re there, to easily find the IBM Cloud Satellite scan results, type &#34;os&#34; into the search bar to help you filter for the scans of the Satellite environment.</p>
+<p>Now, let&#39;s navigate back to our <strong>Validation Results</strong> in SCC once again! Once you&#39;re there, to easily find the IBM Cloud Satellite scan results, type &#34;<strong>os</strong>&#34; into the search bar to help you filter for the scans of the Satellite environment.</p>
 <p class="image-container"><img alt="alt-text-here" src="img/45ad3d52fe348074.png"></p>
 <p>Notice the scans that have more than one profile (indicated by &#34;+1&#34;). We&#39;ve actually scanned the Satellite environment against two profiles: the &#34;IBM Cloud for Financial Services v0.4.0&#34; profile that we&#39;ve used throughout this lab, as well as the customized ROKS profile that you explored at the beginning of Phase 3: &#34;ROKS OCP4 Tailored Profile v1.0.&#34;</p>
 <p>Click on the first scan in the list (after typing in &#34;os&#34; into the search box), and notice the ability to switch between the two profiles.</p>
@@ -489,11 +458,45 @@
 <p>Explore the scan at your leisure. In the screenshots below, we&#39;ll hone in on the failed control, and the associated goals.</p>
 <p class="image-container"><img alt="alt-text-here" src="img/1520eb2c36a76c5.png"><img alt="alt-text-here" src="img/3c1134b3fc0a4e60.png"><img alt="alt-text-here" src="img/67321596f493ac1d.png"></p>
 <p>Well, it&#39;s safe to say that SecureBank&#39;s new CISO Kali Linux, and new Lead Security Engineer Gene Hackman can sleep easy now, knowing that the IBM Cloud Security and Compliance Center is continually assessing their Multi-Cloud environments and modern architectures that are helping them deliver software faster and stay differentiated in the market. Through a single pane of glass, SecureBank can assess and improve on their Cloud security configurations to help secure their environments and prevent fines! All while focusing on results for their business and saving the time and effort that would have been required to build out these sorts of security validations manually.</p>
+<p>Alright, let&#39;s check back in on our last scan of the day! Click &#34;Next&#34; when you&#39;re ready to review the results of the last scan that you ran against the IBM Cloud environment (the scan that you ran after you implemented the remediation steps).</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Phase 4 – Conclusion" duration="0">
+      <google-codelab-step label="Phase 4 - Review the Latest IBM Cloud Scan and Evaluate Drift" duration="0">
+        <p>Now that the scan has completed, let&#39;s see if we were able to improve the security posture of our environment and prepare for compliance reporting. Thinking back to SecureBank, this is a great chance to see the impact that our team new members (Kali Linux and Gene Hackman) have had in their short tenures as CISO and Lead Security Engineer.</p>
+<p>Navigate back to the (latest) validation results:</p>
+<p class="image-container"><img alt="alt-text-here" src="img/cb0fa61d97f76001.png"></p>
+<p>Select your scan from the list. The name of your scan may differ from the screenshot below.</p>
+<p class="image-container"><img alt="alt-text-here" src="img/f042e72a4ec386a3.png"></p>
+<p>Take a moment to review the latest scan! In the top left, make sure you&#39;re looking at the scan with the most recent timestamp. Also, take note of how much your compliance score increased from your first scan!</p>
+<p class="image-container"><img alt="alt-text-here" src="img/358658c5f13cc528.png"></p>
+<p>Let&#39;s take a look at the individual goals that we worked to remediate and see if we were successful.</p>
+<p>Click on the dark red bar in the &#34;Failures&#34; graph as we did previously in the lab:</p>
+<p class="image-container"><img alt="alt-text-here" src="img/5832e701f9cc48cc.png"></p>
+<p>Click on our AC-4 control once again:</p>
+<p class="image-container"><img alt="alt-text-here" src="img/e7baade35a6db88d.png"></p>
+<p>Scroll down and observe the following goals that we worked on, and click into each one:</p>
+<ul>
+<li>Goal ID: 3000107</li>
+<li>Goal ID: 3000441</li>
+<li>Goal ID: 3000445</li>
+</ul>
+<p><strong>Goal 3000107</strong>: Notice that this goal is now passing, indicated by the green ID banner and the green check mark next to the individual COS bucket. SCC was able to see that only our IP address is allowed to access this bucket, which is a great security measure to have in place. We&#39;ve passed this goal!</p>
+<p class="image-container"><img alt="alt-text-here" src="img/7c278c33486afd1f.png"></p>
+<p><strong>Goal 3000441</strong>: Similarly, after updating our ACL, our SCC scan picked up on our new configuration. It knows that we are only allowing access into our VPC from our machine!</p>
+<p class="image-container"><img alt="alt-text-here" src="img/402eb0805d33359f.png"></p>
+<p><strong>Goal 3000445</strong>: Lastly, we passed this goal as well! SCC is much happier with our security group after restricting access to only our machine, as opposed to leaving it accessible by the entire internet.</p>
+<p class="image-container"><img alt="alt-text-here" src="img/f8e568f5c8f85b3a.png"></p>
+<p>Finally, using the drift view in SCC, we make it easy to review how your environment has improved over time based on your remediation steps. You can go ahead and click out of the AC-4 control, then and click on the drift view icon (as shown in the screenshot below) for a visual representation of the improvements we made between the scans we ran in this lab. Customers find tremendous value in being able to show progress over time – notice how much we improved after addressing only a few goals!</p>
+<p class="image-container"><img alt="alt-text-here" src="img/c54355676134ba18.png"></p>
+<p>Congratulations! If you&#39;ve made it this far, you&#39;ve completed the primary hands-on portion of this lab!</p>
+<h2 is-upgraded>Take a moment to consult your instructor. Show them your Drift View from the most recent step and make sure you grab some IBM SWAG!**</h2>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Phase 5 – Conclusion" duration="0">
         <p>Congratulations (again)!! That concludes our IBM Cloud Security and Compliance Center hands-on lab.</p>
 <p>Please reach out to your instructor for any questions you have about SCC or this lab. We&#39;ll be happy to provide any support that you may need in terms of completing the lab, as well as the IBM Cloud Security and Compliance Center as a whole!</p>
 <p>Let&#39;s take a quick moment to reflect on what we accomplished today:</p>
